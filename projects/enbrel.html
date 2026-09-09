@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Enbrel and U.S. etanercept product-family FDA and openFDA safety surveillance case study."><title>Etanercept Family Safety Surveillance | Rita Lin</title><link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../styles.css"></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav-shell" aria-label="Primary navigation"><a class="brand" href="../index.html"><span class="brand-mark">PV</span><span>Rita Lin</span></a><ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="../safety-surveillance.html" aria-current="page">Safety surveillance</a></li><li><a href="../literature-surveillance.html">Literature</a></li><li><a href="../methodology.html">Methodology</a></li><li><a href="../about.html">About</a></li></ul></nav></header>
+<main id="main">
+  <section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="../safety-surveillance.html">Safety surveillance</a> / Etanercept family</p><p class="eyebrow">FDA-only case study</p><h1>Enbrel and the U.S. etanercept product family</h1><p class="lede">A reference-product and biosimilar family review integrating current labeling, FDA class and pediatric surveillance, and a multi-field openFDA FAERS/AEMS cohort.</p></div></section>
+  <div class="shell content-grid"><article class="prose">
+    <h2>Surveillance question</h2><p>How can a broad U.S. etanercept family cohort support label-based surveillance while avoiding unsupported comparisons among the reference product and biosimilars?</p>
+    <div class="metric-row"><div class="metric"><strong>603,704</strong><span>matched report records</span></div><div class="metric"><strong>37.0%</strong><span>coded serious</span></div><div class="metric"><strong>30 Jun 2026</strong><span>analysis cutoff</span></div></div>
+    <h2>Product-family context</h2><p>The family includes the reference product Enbrel and Enbrel Mini (etanercept), Erelzi and Erelzi Sensoready (etanercept-szzs), and Eticovo (etanercept-ykro). The current Enbrel label carries a boxed warning for serious infections and malignancies. Additional labeled risks include neurologic events, heart failure, hematologic reactions, hepatitis B reactivation, allergic reactions, and autoimmunity.</p>
+    <h2>Multi-name search</h2><p>The search retained all FDA-verified product, presentation, generic, proper-name, and biosimilar aliases, including zero-result Eticovo and etanercept-ykro terms. Enbrel/reference and generic etanercept terms dominated the data; Erelzi terms contributed a much smaller overlapping subset.</p>
+    <details><summary>View reproducible cohort specification</summary><pre><code>((patient.drug.medicinalproduct.exact:"ENBREL" OR
+ patient.drug.medicinalproduct.exact:"ENBREL MINI" OR
+ patient.drug.medicinalproduct.exact:"ENBREL SURECLICK" OR
+ patient.drug.medicinalproduct.exact:"ETANERCEPT" OR
+ patient.drug.medicinalproduct.exact:"ERELZI" OR
+ patient.drug.medicinalproduct.exact:"ERELZI SENSOREADY" OR
+ patient.drug.medicinalproduct.exact:"ETANERCEPT-SZZS" OR
+ patient.drug.medicinalproduct.exact:"ETICOVO" OR
+ patient.drug.medicinalproduct.exact:"ETANERCEPT-YKRO" OR
+ patient.drug.activesubstance.activesubstancename.exact:"ETANERCEPT" OR
+ patient.drug.activesubstance.activesubstancename.exact:"ETANERCEPT-SZZS" OR
+ patient.drug.activesubstance.activesubstancename.exact:"ETANERCEPT-YKRO" OR
+ patient.drug.openfda.generic_name.exact:"ETANERCEPT" OR
+ patient.drug.openfda.generic_name.exact:"ETANERCEPT-SZZS" OR
+ patient.drug.openfda.generic_name.exact:"ETANERCEPT-YKRO" OR
+ patient.drug.openfda.brand_name.exact:"ENBREL" OR
+ patient.drug.openfda.brand_name.exact:"ENBREL MINI" OR
+ patient.drug.openfda.brand_name.exact:"ERELZI" OR
+ patient.drug.openfda.brand_name.exact:"ERELZI SENSOREADY" OR
+ patient.drug.openfda.brand_name.exact:"ETICOVO"))
+AND receivedate:[20040101 TO 20260630]</code></pre></details>
+    <h2>Seriousness and outcomes</h2>
+    <div class="table-wrap"><table><thead><tr><th>Measure</th><th class="num">Records</th><th class="num">% of cohort</th></tr></thead><tbody><tr><td>Serious</td><td class="num">223,188</td><td class="num">37.0%</td></tr><tr><td>Non-serious</td><td class="num">380,505</td><td class="num">63.0%</td></tr><tr><td>Death flag</td><td class="num">19,086</td><td class="num">3.2%</td></tr><tr><td>Hospitalization flag</td><td class="num">70,067</td><td class="num">11.6%</td></tr><tr><td>Life-threatening flag</td><td class="num">11,374</td><td class="num">1.9%</td></tr><tr><td>Disability flag</td><td class="num">13,583</td><td class="num">2.2%</td></tr></tbody></table></div>
+    <p class="note"><strong>Not a comparative biosimilar analysis.</strong> Reporting history, exposure, launch timing, market share, and product-name normalization differ materially across products.</p>
+    <h2>Leading reported PTs</h2>
+    <div class="table-wrap"><table><thead><tr><th>Rank</th><th>MedDRA PT</th><th class="num">Records</th><th class="num">%</th></tr></thead><tbody><tr><td>1</td><td>Drug ineffective</td><td class="num">77,551</td><td class="num">12.8%</td></tr><tr><td>2</td><td>Injection site pain</td><td class="num">57,225</td><td class="num">9.5%</td></tr><tr><td>3</td><td>Rheumatoid arthritis</td><td class="num">48,425</td><td class="num">8.0%</td></tr><tr><td>4</td><td>Arthralgia</td><td class="num">46,749</td><td class="num">7.7%</td></tr><tr><td>5</td><td>Pain</td><td class="num">45,166</td><td class="num">7.5%</td></tr><tr><td>6</td><td>Injection site erythema</td><td class="num">41,105</td><td class="num">6.8%</td></tr><tr><td>7</td><td>Fatigue</td><td class="num">31,864</td><td class="num">5.3%</td></tr><tr><td>8</td><td>Joint swelling</td><td class="num">26,750</td><td class="num">4.4%</td></tr><tr><td>9</td><td>Pain in extremity</td><td class="num">26,540</td><td class="num">4.4%</td></tr><tr><td>10</td><td>Headache</td><td class="num">25,715</td><td class="num">4.3%</td></tr></tbody></table></div>
+    <h2>AESI screening</h2>
+    <div class="table-wrap"><table><thead><tr><th>Screening group</th><th class="num">Records</th><th class="num">%</th><th>Label basis</th></tr></thead><tbody><tr><td>Serious and opportunistic infections</td><td class="num">22,856</td><td class="num">3.8%</td><td>Boxed warning / Section 5.1</td></tr><tr><td>Malignancy</td><td class="num">3,995</td><td class="num">0.7%</td><td>Boxed warning / Section 5.3</td></tr><tr><td>Demyelinating and seizure disorders</td><td class="num">3,500</td><td class="num">0.6%</td><td>Section 5.2</td></tr><tr><td>Heart failure</td><td class="num">2,157</td><td class="num">0.4%</td><td>Section 5.4</td></tr><tr><td>Hematologic cytopenias / aplastic anemia</td><td class="num">5,415</td><td class="num">0.9%</td><td>Section 5.5</td></tr><tr><td>Serious hypersensitivity</td><td class="num">33,523</td><td class="num">5.6%</td><td>Section 5.7</td></tr><tr><td>Autoimmune / paradoxical inflammatory events</td><td class="num">37,969</td><td class="num">6.3%</td><td>Section 5.9 / Postmarketing</td></tr></tbody></table></div>
+    <h2>Interpretation</h2><p>Injection-site PTs showed strong descriptive concordance with the label. Infection concepts aligned with common-infection labeling and the boxed serious-infection warning, but counts cannot distinguish minor from serious product-attributable infections. Rheumatoid arthritis, arthralgia, joint swelling, pain, and psoriasis may substantially reflect approved indications or underlying disease. The broad family cohort is suitable for surveillance priority setting, not comparison among Enbrel, Erelzi, and Eticovo.</p>
+    <h2>Sources</h2><ul class="source-list"><li><a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/103795s5605lbl.pdf">FDA-approved Enbrel prescribing information</a></li><li><a href="https://purplebooksearch.fda.gov/index.cfm?blaNo=103795&amp;event=productdetails">FDA Purple Book: Enbrel</a></li><li><a href="https://www.fda.gov/drugs/biosimilars/biosimilar-product-information">FDA biosimilar product information</a></li><li><a href="https://www.fda.gov/media/189536/download">FDA pediatric postmarketing pharmacovigilance review</a></li><li><a href="https://open.fda.gov/apis/drug/event/">openFDA drug adverse-event API</a></li></ul>
+    <p class="next-project"><a href="../safety-surveillance.html">← Return to all case studies</a></p>
+  </article><aside class="sidebar"><h2>Data snapshot</h2><dl><dt>Reference product</dt><dd>Enbrel / etanercept</dd><dt>Biosimilars</dt><dd>Erelzi and Eticovo</dd><dt>Applications</dt><dd>BLA 103795, 761042, 761066</dd><dt>Dataset update</dt><dd>30 July 2026</dd><dt>Cutoff</dt><dd>30 June 2026</dd><dt>Review date</dt><dd>3 September 2026</dd></dl></aside></div>
+</main>
+<footer class="site-footer"><div class="footer-shell"><div><strong>Rita Rui-Ci Lin, PhD</strong><div class="footer-links"><a href="https://github.com/rita850720">GitHub</a><a href="https://www.linkedin.com/in/ruici-lin">LinkedIn</a></div></div><p>Independent educational analysis of spontaneous reports. Counts are not incidence estimates and do not establish causality, comparative risk, or medical advice.</p></div></footer>
+
+</body></html>
