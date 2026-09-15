@@ -1,0 +1,55 @@
+.report-period {
+  color: var(--navy) !important;
+  font-size: .88rem;
+  font-weight: 720;
+}
+
+.report-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .45rem;
+  margin: .25rem 0 1.25rem;
+}
+
+.report-stats div {
+  padding: .65rem .5rem;
+  border-radius: 9px;
+  background: var(--blue-soft);
+  text-align: center;
+}
+
+.report-stats dt {
+  color: var(--muted);
+  font-size: .68rem;
+  font-weight: 760;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.report-stats dd {
+  margin: .2rem 0 0;
+  color: var(--navy);
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.method-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.section-grid {
+  padding-bottom: 0;
+}
+
+#reports,
+#methodology,
+#case-studies {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (max-width: 860px) {
+  .method-cards {
+    grid-template-columns: 1fr;
+  }
+}

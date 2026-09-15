@@ -1,14 +1,17 @@
 # Pharmacovigilance Evidence Portfolio
 
-Public portfolio for Rita Rui-Ci Lin, PhD, presenting independent safety-surveillance case studies based on FDA labeling, regulatory history, safety communications, and openFDA FAERS/AEMS data.
+Public portfolio for Rita Rui-Ci Lin, PhD, presenting independent safety-surveillance case studies and literature-surveillance reports based on public FDA and PubMed evidence.
 
 ## Pages
 
 - Home
 - Safety surveillance case studies
-- Literature surveillance framework
-- Reproducible methodology
+- Literature surveillance reports for Tepezza, Otezla, and Enbrel
+- Safety-surveillance methodology embedded with the openFDA case studies
+- Literature-surveillance methodology embedded with the PubMed report library
 - Professional background
+
+The legacy `methodology.html` address remains available as a routing page to the two distinct methods.
 
 ## Local preview
 
