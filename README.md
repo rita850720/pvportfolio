@@ -5,7 +5,7 @@ Public portfolio for Rita Rui-Ci Lin, PhD, presenting independent safety-surveil
 ## Pages
 
 - Home
-- Safety surveillance case studies
+- Interactive safety-surveillance dashboard and full case studies
 - Literature surveillance reports for Tepezza, Otezla, and Enbrel
 - Safety-surveillance methodology embedded with the openFDA case studies
 - Literature-surveillance methodology embedded with the PubMed report library

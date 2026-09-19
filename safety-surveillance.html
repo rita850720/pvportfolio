@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="FDA safety surveillance case studies and reproducible openFDA methodology by Rita Rui-Ci Lin."><title>Safety Surveillance | Rita Lin</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="portfolio.css"></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Interactive FDA safety surveillance dashboards, case studies, and reproducible openFDA methodology by Rita Rui-Ci Lin."><title>Safety Surveillance | Rita Lin</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="safety-dashboard.css"><script src="safety-dashboard.js" defer></script></head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><nav class="nav-shell" aria-label="Primary navigation"><a class="brand" href="index.html"><span class="brand-mark">PV</span><span>Rita Lin</span></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="safety-surveillance.html" aria-current="page">Safety surveillance</a></li><li><a href="literature-surveillance.html">Literature surveillance</a></li><li><a href="about.html">About</a></li></ul></nav></header>
 <main id="main">
-  <section class="page-hero"><div class="shell"><p class="eyebrow">Case-study collection</p><h1>FDA safety surveillance</h1><p class="lede">Three reproducible desk reviews showing how product context, naming quality, market history, and label-based questions shape the interpretation of openFDA FAERS/AEMS data.</p><div class="actions"><a class="button" href="#case-studies">View case studies</a><a class="button secondary" href="#methodology">Review safety methods</a></div></div></section>
-  <section class="section" id="case-studies"><div class="shell"><div class="cards">
+  <section class="page-hero"><div class="shell"><p class="eyebrow">Interactive case-study collection</p><h1>FDA safety surveillance</h1><p class="lede">Explore three reproducible desk reviews through an interactive dashboard, then open the complete case studies for product context, exact retrieval logic, regulatory sources, and detailed interpretation.</p><div class="actions"><a class="button" href="#dashboard">Explore dashboard</a><a class="button secondary" href="#methodology">Review safety methods</a></div></div></section>
+  <section class="section dashboard-section" id="dashboard"><div class="shell">
+    <div class="section-head"><div><p class="eyebrow">Interactive evidence view</p><h2>Explore the safety data</h2></div><p>Switch products and display modes, then hover, focus, or select any chart mark for its exact count, cohort proportion, and interpretive context.</p></div>
+    <div class="dashboard-shell" id="safety-dashboard">
+      <div class="dashboard-toolbar">
+        <div class="dashboard-products" role="group" aria-label="Select medicinal product">
+          <button class="dashboard-tab" type="button" data-dashboard-product="tepezza" aria-pressed="true">Tepezza</button>
+          <button class="dashboard-tab" type="button" data-dashboard-product="otezla" aria-pressed="false">Otezla</button>
+          <button class="dashboard-tab" type="button" data-dashboard-product="enbrel" aria-pressed="false">Enbrel family</button>
+        </div>
+        <div class="dashboard-mode" role="group" aria-label="Display chart values">
+          <button type="button" data-dashboard-mode="count" aria-pressed="true">Counts</button>
+          <button type="button" data-dashboard-mode="percent" aria-pressed="false">Percent</button>
+        </div>
+      </div>
+      <div class="dashboard-body">
+        <div class="dashboard-title-row">
+          <div><h3 id="dashboard-product-title">Tepezza safety surveillance</h3><p class="dashboard-subtitle" id="dashboard-product-subtitle"></p></div>
+          <a class="dashboard-source-link" id="dashboard-case-study" href="projects/tepezza.html">Open full case study →</a>
+        </div>
+        <div class="dashboard-stats" aria-label="Selected product summary">
+          <div class="dashboard-stat"><span>Matched reports</span><strong id="dashboard-total">—</strong></div>
+          <div class="dashboard-stat"><span>Serious reports</span><strong id="dashboard-serious">—</strong></div>
+          <div class="dashboard-stat"><span>Analysis cutoff</span><strong id="dashboard-cutoff">—</strong></div>
+        </div>
+        <div class="dashboard-grid">
+          <section class="dashboard-panel" aria-labelledby="dashboard-seriousness-heading">
+            <div class="dashboard-panel-head"><h4 id="dashboard-seriousness-heading">Seriousness classification</h4><span class="dashboard-panel-note">Mutually exclusive</span></div>
+            <div class="dashboard-donut-layout"><svg class="dashboard-donut" id="dashboard-donut" viewBox="0 0 168 168" role="img" aria-label="Seriousness classification donut chart"></svg><div class="dashboard-legend" id="dashboard-legend"></div></div>
+          </section>
+          <section class="dashboard-panel" aria-labelledby="dashboard-outcome-heading">
+            <div class="dashboard-panel-head"><h4 id="dashboard-outcome-heading">Seriousness outcome flags</h4><span class="dashboard-panel-note">Flags can overlap</span></div>
+            <div class="dashboard-bars" id="dashboard-outcomes"></div>
+          </section>
+          <section class="dashboard-panel dashboard-panel-wide" aria-labelledby="dashboard-profile-heading">
+            <div class="dashboard-panel-head"><h4 id="dashboard-profile-heading">Reported-event and AESI profile</h4><span class="dashboard-panel-note">Report-level descriptive screens</span></div>
+            <div class="dashboard-two-column"><div class="dashboard-subpanel"><h5>Leading reported PTs</h5><div class="dashboard-bars" id="dashboard-pts"></div></div><div class="dashboard-subpanel"><h5>AESI screening</h5><div class="dashboard-bars" id="dashboard-aesi"></div></div></div>
+            <div class="dashboard-selection" id="dashboard-selection" aria-live="polite">Select a slice or row to retain its interpretation here.</div>
+          </section>
+        </div>
+        <details class="dashboard-data"><summary>View exact dashboard data</summary><div class="table-wrap"><table><thead><tr><th>Group</th><th>Measure</th><th class="num">Reports</th><th class="num">% of cohort</th><th>Context</th></tr></thead><tbody id="dashboard-data-body"></tbody></table></div></details>
+        <p class="note dashboard-guardrail"><strong>Interpretive guardrail:</strong> These are descriptive spontaneous-report counts. They do not establish incidence, comparative safety, product-attributable risk, or causality. Outcome flags, PTs, and AESI screens can overlap; only the seriousness-classification donut represents parts of a whole.</p>
+      </div>
+      <div class="dashboard-tooltip" role="tooltip"></div>
+    </div>
+    <noscript><p class="note"><strong>Interactive view unavailable:</strong> JavaScript is disabled. Open the individual case studies below for the complete data tables.</p></noscript>
+  </div></section>
+  <section class="section" id="case-studies"><div class="shell"><div class="section-head"><div><p class="eyebrow">Full evidence records</p><h2>Open the complete case studies</h2></div><p>Each case study preserves the product context, query specification, exact tables, regulatory sources, interpretation, and limitations behind the dashboard.</p></div><div class="cards">
     <article class="card"><span class="tag">Teprotumumab-trbw</span><h3>Tepezza</h3><p>A focused biologic review connecting postauthorization label development with hearing impairment, hyperglycemia, IBD/GI complications, infusion reactions, and FDA potential signals.</p><p><strong>Snapshot:</strong> 5,719 matched reports through 30 June 2026.</p><a class="card-link" href="projects/tepezza.html">Open case study →</a></article>
     <article class="card"><span class="tag">Apremilast</span><h3>Otezla</h3><p>A high-volume multi-field cohort examining gastrointestinal and volume-depletion terms, depression and suicidality, weight/appetite effects, and hypersensitivity.</p><p><strong>Snapshot:</strong> 145,584 matched postauthorization records through 30 June 2026.</p><a class="card-link" href="projects/otezla.html">Open case study →</a></article>
     <article class="card"><span class="tag">Etanercept family</span><h3>Enbrel, Erelzi, and Eticovo</h3><p>A reference-product and biosimilar family review designed to support broad surveillance without implying comparative safety from unequal reporting histories.</p><p><strong>Snapshot:</strong> 603,704 matched records from 2004 through 30 June 2026.</p><a class="card-link" href="projects/enbrel.html">Open case study →</a></article>
