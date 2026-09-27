@@ -7,6 +7,7 @@ Public portfolio for Rita Rui-Ci Lin, PhD, presenting independent safety-surveil
 - Home
 - Interactive safety-surveillance dashboard and full case studies
 - Literature surveillance reports for Tepezza, Otezla, and Enbrel
+- Literature-based ICSR case-processing examples for etanercept, teprotumumab, and apremilast
 - Safety-surveillance methodology embedded with the openFDA case studies
 - Literature-surveillance methodology embedded with the PubMed report library
 - Professional background
